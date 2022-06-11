@@ -1,12 +1,10 @@
 package com.sparta.minipro.model;
 
-import com.sparta.minipro.dto.PokemonDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Setter
 @Getter // get 함수를 일괄적으로 만들어줍니다.
@@ -29,17 +27,13 @@ public class Pokemon {
     @Column(nullable = false)
     private String element;
 
-    @Column(nullable = false)
-    private String desc;
-
     @Column
     private Long likesCnt;
 
-    public Pokemon(String pokemonnum,String img, String pokemonname,String ddesc, String ele) {
+    public Pokemon(String pokemonnum,String img, String pokemonname, String ele) {
         this.name = pokemonname;
         this.imageUrl = img;
         this.num = pokemonnum;
         this.element = ele;
-        this.desc = ddesc;
     }
 }
