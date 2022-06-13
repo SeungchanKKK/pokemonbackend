@@ -27,6 +27,7 @@ public class Pokemon {
     @Column(nullable = false)
     private String element;
 
+
     @Column
     private Long likesCnt;
 
@@ -35,5 +36,6 @@ public class Pokemon {
         this.imageUrl = img;
         this.num = pokemonnum;
         this.element = ele;
+
     }
 }
