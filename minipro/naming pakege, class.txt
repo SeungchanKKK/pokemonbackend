@@ -1,0 +1,36 @@
+model
++---- entity+-----Pokemon
++               +-----Users
++               +-----Comments
++               +-----Like 
++
++-----dto+-----SignupDto
+               +-----CommentsDto
+               +-----SearchDto
+
+service
++-----UserService
++-----CommentsService
++-----LikeService
++-----PokemonService
+
+controller
++-----UserController
++-----CommentsController
++-----LikeController
++-----PokemonController
+
+repository
++-----UserRepository
++-----CommentsRepository
++-----LikeRepository
++-----PokemonRepository
+
+security
++-----UserDetailsImpl
++-----UserDetailsServiceImpl
++-----WebSecurityConfig
+
+validator
++-----UserValidator
++-----CommentsValidator

@@ -1,4 +1,4 @@
-package com.sparta.minipro.model;
+package com.project.pokemon.model.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,7 +28,7 @@ public class Pokemon {
     private String element;
 
     @Column
-    private String things;
+    private String info;
 
     @Column
     private Long likesCnt;
@@ -38,6 +38,6 @@ public class Pokemon {
         this.imageUrl = img;
         this.num = pokemonnum;
         this.element = ele;
-        this.things= ddesc;
+        this.info= ddesc;
     }
 }

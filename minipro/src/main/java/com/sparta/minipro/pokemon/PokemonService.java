@@ -24,7 +24,7 @@ public class PokemonService {
 
     public String data() throws IOException {
 
-        for(int i =1; i <200 ; i++){
+        for(int i =1; i <209 ; i++){
         String crawlingURL = "https://pokemonkorea.co.kr/pokedex/view/" +i ;
 
         Connection conn = Jsoup.connect(crawlingURL);
@@ -44,7 +44,7 @@ public class PokemonService {
                             String ddesc = pokedesc.getElementsByClass("para descript").text();
                             String ele = pokeimage.getElementsByClass("img-type").text();
 
-                            Pokemon pokemon = new Pokemon (pokemonnum,img,pokemonname,ele);
+                            Pokemon pokemon = new Pokemon (pokemonnum,img,pokemonname,ele,ddesc);
 
                             pokemonRepository.save(pokemon);
 
